@@ -31,39 +31,76 @@ This guide will help you simulate a local network environment entirely within Az
 
 ### STEP 1: Create a Resource Group
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 1. Go to [Azure Portal](https://portal.azure.com)  
 2. In the left-hand menu, click **Resource groups** > **+ Create**  
 3. Fill in:
    - Subscription: Default  
-   - Name: `OnPrem-Lab`  
+   - Name: `Adminz`  
    - Region: (e.g., `West US`)  
 4. Click **Review + Create** > **Create**
+
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/raw/main/p1.jpg" alt="1" width="350"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p2.png" alt="2" width="350"/>
+</td>
+  </tr>
+</table>
 
 ---
 
 ### STEP 2: Set Up the Virtual Network (VNet)
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 1. Search: **Virtual networks** > **+ Create**  
 2. Configuration:
-   - Name: `OnPremVNet`  
+   - Resource Group: `Adminlab`  
+   - Name: `AdminVNet`
    - Region: same as resource group  
-   - Address space: `10.0.0.0/16`  
-3. Add Subnet:
+3. Click `Next: IP Addresses`
+4. Leave the default IPv4 address space as 10.0.0.0/16
+5. Add Subnet:
    - Name: `default`  
-   - Subnet range: `10.0.0.0/24`  
-4. **Review + Create** > **Create**
+   - Starting address: `10.0.0.0`
+   - Size: `/24`
+   - This will auto-fill the Subnet address range to 10.0.0.0 - 10.0.0.255
+6. **Review + Create** > **Create**
+
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/raw/main/p3.png" alt="3" width="350"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p4.png" alt="4" width="350"/>
+</td>
+  </tr>
+</table>
 
 ---
 
 ### STEP 3: Create Network Security Group (NSG)
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 1. Search: **Network security groups** > **+ Create**  
 2. Fill in:
-   - Name: `OnPrem-NSG`  
+   - Name: `AdminNSG`  
    - Region: same as above  
 3. Click **Review + Create** > **Create**
 
 #### Add Inbound Rules:
+
+1. Go to **Inbound security rules** in the settings of the Network security group
+2. Click **+ Add**
 
 **Allow RDP (TCP 3389):**
 
@@ -76,7 +113,7 @@ This guide will help you simulate a local network environment entirely within Az
 | Priority         | 100         |
 | Name             | Allow-RDP   |
 
-**Allow ICMP (Ping):**
+**Allow ICMPv4 (Ping):**
 
 | Setting           | Value        |
 |------------------|--------------|
@@ -85,44 +122,83 @@ This guide will help you simulate a local network environment entirely within Az
 | Priority         | 110          |
 | Name             | Allow-ICMPv4 |
 
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/raw/main/p5.png" alt="5" width="350"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p7.png" alt="6" width="350"/>
+</td>
+  </tr>
+</table>
+
 ---
 
 ### STEP 4: Deploy Domain Controller (Windows Server 2022)
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 1. Go to **Virtual Machines** > **+ Create**  
 2. Configuration:
-   - Name: `DC-Server`  
+   - Name: `DC`  
    - Image: `Windows Server 2022 Datacenter – Gen2`  
-   - Size: `B1s`  
-   - Username: `labadmin`  
+   - Size: `B1s` or `B2s`  
+   - Username: `Adminlab`  
    - Password: Strong password  
    - Inbound Ports: **RDP (3389)**  
 3. Disk: **Standard HDD**
 4. Networking:
-   - VNet: `OnPremVNet`  
+   - VNet: `AdminVNet`  
    - Subnet: `default`  
-   - NSG: Select `OnPrem-NSG` or reassign later  
+   - NSG: Select `AdminNSG` or reassign later  
 5. Click **Review + Create** > **Create**
+
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/blob/main/p12.png" alt="7" width="350"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/blob/main/p15.png" alt="8" width="350"/>
+</td>
+  </tr>
+</table>
 
 ---
 
 ### STEP 5: Deploy Client PC (Windows 10 Pro)
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 Same steps as above with these differences:
 
-- Name: `Client-PC`  
+- Name: `Client`  
 - Image: `Windows 10 Pro, Version 22H2 – Gen2`  
 - **Confirm license** checkbox for multi-tenant hosting  
 - Assign same VNet/Subnet and NSG
+
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/raw/main/p17.png" alt="9" width="350"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p18.png" alt="10" width="350"/>
+</td>
+  </tr>
+</table>
 
 ---
 
 ### STEP 6: Connect via RDP
 
+<table>
+  <tr>
+    <td style="vertical-align: top; width: 60%;">
+      
 1. Open Azure Portal > on both VMs > **Connect > RDP**  
 2. Download `.rdp` file and open  
 3. Enter:
-   - Username: `labadmin`  
+   - Username: `Adminlab`  
    - Password: the one you set  
 4. If prompted with a security warning, click Yes to proceed
 5. Inside one VM, open Command Prompt, type: `ipconfig`
@@ -132,6 +208,19 @@ Same steps as above with these differences:
    - You should see successful replies (4 packets sent/received).
 
 **Always ping the private IP,** not the public one, since both VMs are on the same internal virtual network.
+
+</td>
+<td style="vertical-align: top; text-align: right; width: 40%;">
+  <img src="https://github.com/jorge-nbb/images/raw/main/p19.png" alt="11" height="250"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p21.png" alt="12" height="250"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p22.png" alt="13" height="800"/>
+  <hr>
+  <img src="https://github.com/jorge-nbb/images/raw/main/p23.png" alt="14" height="800"/>
+</td>
+  </tr>
+</table>
 
 ---
 

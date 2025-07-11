@@ -39,7 +39,7 @@ This guide will help you simulate a local network environment entirely within Az
 2. In the left-hand menu, click **Resource groups** > **+ Create**  
 3. Fill in:
    - Subscription: Default  
-   - Name: `Adminz`  
+   - Name: `Adminlab`  
    - Region: (e.g., `West US`)  
 4. Click **Review + Create** > **Create**
 

@@ -45,9 +45,9 @@ This guide will help you simulate a local network environment entirely within Az
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/raw/main/p1.jpg" alt="1" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p1.jpg" alt="1" width="350"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p2.png" alt="2" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p2.png" alt="2" width="350"/>
 </td>
   </tr>
 </table>
@@ -76,9 +76,9 @@ This guide will help you simulate a local network environment entirely within Az
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/raw/main/p3.png" alt="3" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p3.png" alt="3" width="350"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p4.png" alt="4" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p4.png" alt="4" width="350"/>
 </td>
   </tr>
 </table>
@@ -124,9 +124,9 @@ This guide will help you simulate a local network environment entirely within Az
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/raw/main/p5.png" alt="5" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p5.png" alt="5" width="350"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p7.png" alt="6" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p7.png" alt="6" width="350"/>
 </td>
   </tr>
 </table>
@@ -156,9 +156,9 @@ This guide will help you simulate a local network environment entirely within Az
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/blob/main/p12.png" alt="7" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p12.png" alt="7" width="350"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/blob/main/p15.png" alt="8" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p15.png" alt="8" width="350"/>
 </td>
   </tr>
 </table>
@@ -180,9 +180,9 @@ Same steps as above with these differences:
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/raw/main/p17.png" alt="9" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p17.png" alt="9" width="350"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p18.png" alt="10" width="350"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p18.png" alt="10" width="350"/>
 </td>
   </tr>
 </table>
@@ -211,13 +211,13 @@ Same steps as above with these differences:
 
 </td>
 <td style="vertical-align: top; text-align: right; width: 40%;">
-  <img src="https://github.com/jorge-nbb/images/raw/main/p19.png" alt="11" height="250"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p19.png" alt="11" height="250"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p21.png" alt="12" height="250"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p21.png" alt="12" height="250"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p22.png" alt="13" height="800"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p22.png" alt="13" height="800"/>
   <hr>
-  <img src="https://github.com/jorge-nbb/images/raw/main/p23.png" alt="14" height="800"/>
+  <img src="https://github.com/jorge-nbb/Azure-Setup-VM-Deployment-Domain-Controller-Client-PC-/blob/main/images/p23.png" alt="14" height="800"/>
 </td>
   </tr>
 </table>
